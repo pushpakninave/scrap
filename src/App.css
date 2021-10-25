@@ -1,0 +1,36 @@
+.app{
+  background: rgb(43, 109, 109);
+  border: black 5px solid;
+  border-radius: 10px;
+  height:100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  padding: 0px 10px;
+}
+button{
+  border-style: none;
+  font-size: 30px;
+  width: 50px;
+}
+.tweet{
+  background-color: rgb(156, 191, 192);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  /* padding: 10px 20px; */
+  /* margin: 10px; */
+  border-radius: 20px;
+}
+.grien{
+  color:chartreuse;
+  font-size: 30px;
+}
+.ried{
+  color:rgb(243, 43, 43);
+  font-size: 30px;
+}
