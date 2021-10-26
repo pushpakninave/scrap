@@ -1,28 +1,21 @@
-import React, {useState} from "react";
-import "./App.css";
+import React, { useState } from "react";
+import "./App.css"
+import Tweet from "./tweet";
 
 export default function App(){
-  const [count, setCount] = useState(0);
-  const [swetch, setSwetch] = useState("counter");
-  const [status, setStatus] = useState(false);
-  const increase =()=>{
-    setCount(count+1);
-    setSwetch("counter increase");
-    setStatus(true);
-  }
-  const decrease =()=>{
-    setCount(count-1);
-    setSwetch("counter decrease");
-    setStatus(false);
-  }
+  const [user, setuser] = useState([
+    {name: "sam", greet:"hi! there"},
+    {name: "Ram", greet:"Namaste"},
+    {name: "haruki", greet:"Arigato"},
+    {name: "javir", greet:"hola"},
+    {name: "salim", greet:"awk"}
+  ]);
   return(
     <div className="app">
-      <h1 className={status?"grien":"ried"}>{swetch}</h1>
-      <div className="tweet">
-      <button onClick={increase}>+</button>
-      <h2>{count}</h2>
-      <button onClick={decrease}>-</button>
-      </div>
+      <h1>hello reacted</h1>
+      {user.map(user =>(
+        <Tweet  name={user.name} greet={user.greet}/>
+      ))}
     </div>
   );
 }
